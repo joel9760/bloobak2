@@ -107,7 +107,19 @@ class Screen1 extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20.0),
-            ElevatedButton(onPressed: (){}, child:Text('Submit'))
+            ElevatedButton(onPressed: (){
+              showDialog(context: context, builder:(BuildContext context){
+                return AlertDialog(
+                  title: Text('SUCESS !'),
+                  content: Text('Registration Sucessful'),
+                  actions: [
+                    TextButton(onPressed: (){
+                      Navigator.of(context).pop();
+                    }, child: Text('OK'))
+                  ],
+                );
+              });
+            }, child:Text('Submit'))
           ],
         ),
       ),
