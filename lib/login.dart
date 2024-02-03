@@ -31,7 +31,7 @@ class _loginState extends State<login> {
   final _formkey = GlobalKey<FormState>();
   String? validatePassword(String value) {
     RegExp regex =
-        RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$');
+        RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#&*~]).{8,}$');
     if (value.isEmpty) {
       return 'Please enter password';
     } else {
